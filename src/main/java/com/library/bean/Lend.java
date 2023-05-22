@@ -1,5 +1,7 @@
 package com.library.bean;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import java.io.Serializable;
 import java.util.Date;
 
@@ -8,7 +10,9 @@ public class Lend implements Serializable {
     private long ser_num;
     private long book_id;
     private long reader_id;
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date lend_date;
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date back_date;
 
     public long getReaderId() {
